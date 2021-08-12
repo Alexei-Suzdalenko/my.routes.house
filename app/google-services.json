@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "681023103152",
+    "firebase_url": "https://routes-list-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "routes-list",
+    "storage_bucket": "routes-list.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681023103152:android:40393184d5531e293edb75",
+        "android_client_info": {
+          "package_name": "my.routes.house"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681023103152-egakoq7bong2g8inhdf4e5q9rs10151i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "my.routes.house",
+            "certificate_hash": "dd12b4635ae97cfb318bfbd70713c43735b897f6"
+          }
+        },
+        {
+          "client_id": "681023103152-vdamgqvjmaj6kmngc5rtb3c7hqvrej1d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQp_xLRCUnls03gNEReBnuXF0WUvMVxrQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681023103152-vdamgqvjmaj6kmngc5rtb3c7hqvrej1d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

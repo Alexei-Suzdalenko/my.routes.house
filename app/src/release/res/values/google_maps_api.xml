@@ -1,0 +1,6 @@
+<resources>
+    <!--
+    loj.rus@gmail.com  => best house music google project
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCU3bNqeeQGiJCu5gpBjTyV2G3CuLkU-W8</string>
+</resources>
