@@ -19,6 +19,8 @@ import androidx.core.app.ActivityCompat.startActivityForResult
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 
 import android.R.attr.data
+import android.view.Window
+import android.view.WindowManager
 // loj.rus@gmail.com => routes-list.web.app
 // keytool -list -v -keystore svoboda_key.jks
 // svoboda
@@ -30,8 +32,10 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // requestWindowFeature(Window.FEATURE_NO_TITLE)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_login)
-
+      //  Firebase.auth.signOut()
         auth = Firebase.auth
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -41,6 +45,7 @@ class LoginActivity : AppCompatActivity() {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
 
         signIn()
+
       //  val database = Firebase.database
       //  val myRef = database.getReference("message")
       //  myRef.setValue("Hello, World!")
@@ -94,6 +99,10 @@ class LoginActivity : AppCompatActivity() {
                     Log.d("tag", "signInWithCredential:success")
                     Toast.makeText(this, "Login APP", Toast.LENGTH_LONG).show()
                     val user = auth.currentUser
+                    val name = user!!.displayName
+                    val email = user!!.email
+                    val photoUrl = user!!.photoUrl
+                    Log.d("tag", "user => " + name + email + photoUrl)
                   //  updateUI(user)
                 } else {
                     Toast.makeText(this, "Error case", Toast.LENGTH_LONG).show()
