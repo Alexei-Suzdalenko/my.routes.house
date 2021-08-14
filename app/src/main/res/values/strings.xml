@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">my.routes.house</string>
+    <string name="app_name">Mis rutas</string>
+    <string name="enter">Entrar con Google</string>
+
+
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
@@ -10,4 +13,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="list_routes">Listado de Rutas</string>
+    <string name="add_route">Añadir nueva ruta</string>
+    <string name="logout">Salir de la aplicación</string>
 </resources>

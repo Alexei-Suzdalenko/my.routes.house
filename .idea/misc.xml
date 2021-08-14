@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/_OJO_NEW_ACCOUNT_ANDROID_DEVELOPER/my.routes.house/app/src/main/res/layout/activity_login.xml" value="0.22327898550724637" />
+        <entry key="..\:/_OJO_NEW_ACCOUNT_ANDROID_DEVELOPER/my.routes.house/app/src/main/res/layout/activity_add_new_route.xml" value="0.25" />
+        <entry key="..\:/_OJO_NEW_ACCOUNT_ANDROID_DEVELOPER/my.routes.house/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/_OJO_NEW_ACCOUNT_ANDROID_DEVELOPER/my.routes.house/app/src/main/res/menu/menu_list_routes.xml" value="0.38645833333333335" />
       </map>
     </option>
   </component>
