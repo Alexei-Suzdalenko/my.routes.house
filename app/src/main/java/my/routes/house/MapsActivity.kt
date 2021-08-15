@@ -12,10 +12,8 @@ import com.beust.klaxon.*
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.*
 import my.routes.house.databinding.ActivityMapsBinding
-import my.routes.house.service.DecodePoly.decodePoly
-import my.routes.house.service.DecodePoly.getURL
-import org.jetbrains.anko.async
-import org.jetbrains.anko.uiThread
+import my.routes.house.service.maps.Maps_DecodePoly.decodePoly
+import my.routes.house.service.maps.Maps_DecodePoly.getURL
 import java.net.URL
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLocationButtonClickListener, GoogleMap.OnMyLocationClickListener {
     lateinit var listResult : ArrayList<LatLng>

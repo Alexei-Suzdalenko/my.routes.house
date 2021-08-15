@@ -7,11 +7,15 @@ import android.view.MenuItem
 import android.widget.Toast
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-
+import my.routes.house.service.listroutes.ListRoutes_GetListRoutes.Companion.getListRoutes
+import my.routes.house.service.listroutes.ListRoutes_ShowDialog
 class ListRoutesActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_routes)
+
+        getListRoutes(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -23,7 +27,11 @@ class ListRoutesActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.add_route -> {
                 Toast.makeText(this, resources.getString(R.string.add_route), Toast.LENGTH_LONG).show()
-                startActivity(Intent(this, AddNewRouteActivity::class.java));
+                ListRoutes_ShowDialog.showdialog(this)
+                true
+            }
+            R.id.settings -> {
+                startActivity(Intent(this, AjustesActivity::class.java))
                 true
             }
             R.id.logout -> {
@@ -34,4 +42,9 @@ class ListRoutesActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+
+
+
+
 }

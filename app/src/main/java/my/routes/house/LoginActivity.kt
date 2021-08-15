@@ -1,9 +1,7 @@
 package my.routes.house
-import android.R.attr
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -13,20 +11,14 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
-import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import androidx.core.app.ActivityCompat.startActivityForResult
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 
-import android.R.attr.data
 import android.app.Activity
-import android.view.Window
-import android.view.WindowManager
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import kotlinx.android.synthetic.main.activity_login.*
 import my.routes.house.dataclass.User
-import my.routes.house.service.UserReplace
+import my.routes.house.service.login.Login_UserReplace
 
 // loj.rus@gmail.com => routes-list.web.app
 // keytool -list -v -keystore svoboda_key.jks
@@ -93,7 +85,7 @@ class LoginActivity : AppCompatActivity() {
                     val email = user!!.email.toString()
                     val photoUrl = user!!.photoUrl.toString()
                     val database = Firebase.database
-                    val emailReplaced = UserReplace.executeMyReplaces(email)
+                    val emailReplaced = Login_UserReplace.executeMyReplaces(email)
                     val myRef = database.getReference("users/$emailReplaced")
                     myRef.setValue(User(name, email, photoUrl)).addOnCompleteListener { taskIt ->
                         if(taskIt.isSuccessful){

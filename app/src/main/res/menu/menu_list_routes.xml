@@ -8,8 +8,8 @@
         android:title="@string/add_route"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/add_category"
-        android:title="@string/app_name" />
+        android:id="@+id/settings"
+        android:title="@string/settings" />
     <item
         android:id="@+id/logout"
         android:title="@string/logout" />

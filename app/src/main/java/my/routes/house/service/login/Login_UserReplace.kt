@@ -1,6 +1,6 @@
-package my.routes.house.service
+package my.routes.house.service.login
 
-object UserReplace {
+object Login_UserReplace {
     fun executeMyReplaces(email: String): String {
         var result = email.replace(".", "")
             result = result.replace("#", "")

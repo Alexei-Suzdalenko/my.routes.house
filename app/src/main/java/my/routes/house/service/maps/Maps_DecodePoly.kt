@@ -1,8 +1,8 @@
-package my.routes.house.service
+package my.routes.house.service.maps
 
 import com.google.android.gms.maps.model.LatLng
 
-object DecodePoly {
+object Maps_DecodePoly {
     fun decodePoly(encoded: String): List<LatLng> {
         val poly = ArrayList<LatLng>()
         var index = 0
