@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/open_google_map"
+        android:icon="@drawable/open_google_map"
+        android:title="@string/open_google_map"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/change_name"
+        android:title="@string/change_name" />
+    <item
+        android:id="@+id/add_point"
+        android:title="@string/add_point" />
+</menu>

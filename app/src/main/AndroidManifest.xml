@@ -17,8 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Myrouteshouse">
         <activity
-            android:name=".AjustesActivity" android:label="@string/settings"
+            android:name=".CurrentRouteActivity"
             android:exported="true" />
+        <activity
+            android:name=".AjustesActivity"
+            android:exported="true"
+            android:label="@string/settings" />
         <activity
             android:name=".ListRoutePointsActivity"
             android:exported="true"

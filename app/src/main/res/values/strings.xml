@@ -22,4 +22,8 @@
     <string name="loading">Cargando…</string>
     <string name="zero_routes">Aún no tienes rutas creadas</string>
     <string name="settings">Ajustes</string>
+    <string name="open_google_map">Ruta en Google Maps</string>
+    <string name="change_name">Editar nombre de la ruta</string>
+    <string name="add_point">Añadir nuevo punto</string>
+    <string name="route_name_changed">Nombre de la ruta ha cambiado</string>
 </resources>

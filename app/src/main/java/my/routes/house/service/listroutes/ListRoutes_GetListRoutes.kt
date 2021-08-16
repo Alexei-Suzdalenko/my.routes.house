@@ -1,4 +1,5 @@
 package my.routes.house.service.listroutes
+import android.content.Intent
 import android.view.View
 import android.widget.ListView
 import android.widget.TextView
@@ -6,10 +7,10 @@ import android.widget.Toast
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import my.routes.house.CurrentRouteActivity
 import my.routes.house.ListRoutesActivity
 import my.routes.house.R
 import my.routes.house.dataclass.Route
-import my.routes.house.service.listroutes.ListViewRoutesFunctionality.Companion.routesLoaded
 import kotlin.collections.ArrayList
 class ListRoutes_GetListRoutes {
     companion object {
@@ -45,6 +46,16 @@ class ListRoutes_GetListRoutes {
         fun showZeroroutes(textView: TextView){
             textView.visibility = View.VISIBLE
             textView.setText(textView.resources.getString(R.string.zero_routes))
+        }
+        fun routesLoaded(textView: TextView, listView: ListView, listRoutesPrepared: ArrayList<Route>, c: ListRoutesActivity){
+            textView.visibility = View.GONE
+            listView.adapter = RouterListAdapter(c, listRoutesPrepared)
+            listView.setOnItemClickListener { _, _, i, _ ->
+                val intent = Intent(c, CurrentRouteActivity::class.java)
+                    intent.putExtra("id", listRoutesPrepared[i].id)
+                    intent.putExtra("name", listRoutesPrepared[i].name)
+                c.startActivity(intent)
+            }
         }
     }
 }
