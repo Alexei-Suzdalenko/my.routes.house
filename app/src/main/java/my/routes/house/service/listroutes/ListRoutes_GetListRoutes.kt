@@ -33,9 +33,8 @@ class ListRoutes_GetListRoutes {
                     listRoutesPrepared.reverse()
                     routesLoaded(dontHaveRoutesTextView, listView, listRoutesPrepared, c)
                     if( documents.documents.size == 0 ){ showZeroroutes(dontHaveRoutesTextView); }
-
                 }
-                .addOnFailureListener { _ -> routesLoaded(dontHaveRoutesTextView, listView, listRoutesPrepared, c); }
+                .addOnFailureListener { _ -> routesLoaded(dontHaveRoutesTextView, listView, listRoutesPrepared, c); getListRoutes(c); }
             return null
         }
 

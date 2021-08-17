@@ -9,9 +9,10 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import my.routes.house.service.currentroute.AddNewRoutePoint.addNewRoutePoint
 import my.routes.house.service.currentroute.ChangeNameCurrentRoute.changeRouteName
+import my.routes.house.service.currentroute.GetListPointCurrentRoute.getListPointsCurrentRoute
 import my.routes.house.service.listroutes.ListRoutes_ShowDialog
-
 class CurrentRouteActivity : AppCompatActivity() {
     var routeName = ""; var idRoute = ""
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +22,11 @@ class CurrentRouteActivity : AppCompatActivity() {
         routeName = intent.getStringExtra("name").toString()
         idRoute   = intent.getStringExtra("id").toString()
         supportActionBar?.title = routeName
+    }
+
+    override fun onResume() {
+        super.onResume()
+        getListPointsCurrentRoute(idRoute, this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -39,6 +45,7 @@ class CurrentRouteActivity : AppCompatActivity() {
                 true
             }
             R.id.add_point -> {
+                addNewRoutePoint(idRoute, this)
                 true
             }
             else -> super.onOptionsItemSelected(item)

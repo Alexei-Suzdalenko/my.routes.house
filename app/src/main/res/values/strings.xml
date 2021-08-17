@@ -9,7 +9,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
 
-    <string name="app_name">Mis rutas</string>
+    <string name="app_name">Rutas repartidor</string>
     <string name="enter">Entrar con Google</string>
     <string name="login_failed">"Login failed"</string>
     <string name="list_routes">Listado de Rutas</string>
@@ -26,4 +26,11 @@
     <string name="change_name">Editar nombre de la ruta</string>
     <string name="add_point">Añadir nuevo punto</string>
     <string name="route_name_changed">Nombre de la ruta ha cambiado</string>
+    <string name="point_created">Nuevo punto creado</string>
+    <string name="add_new_point">Añadir nuevo punto en el mapa</string>
+    <string name="name">Nombre</string>
+    <string name="latitude">Latitud</string>
+    <string name="longitude">Longitud</string>
+    <string name="not_points">Aún no tiene ningún punto de reparto creado. Crea alguno. Tenga en cuenta que el primer punto creado sera el punto de inicio de la ruta.</string>
+    <string name="description">Descripcion</string>
 </resources>
