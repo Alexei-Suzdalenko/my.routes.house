@@ -4,6 +4,11 @@
         android:id="@+id/open_google_map"
         android:icon="@drawable/open_google_map"
         android:title="@string/open_google_map"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/author"
+        android:icon="@drawable/author"
+        android:title="@string/author"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/change_name"
@@ -11,4 +16,7 @@
     <item
         android:id="@+id/add_point"
         android:title="@string/add_point" />
+    <item
+        android:id="@+id/your_comment"
+        android:title="@string/your_comment" />
 </menu>

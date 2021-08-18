@@ -15,6 +15,7 @@ import my.routes.house.CurrentRouteActivity
 import my.routes.house.R
 import my.routes.house.dataclass.PointRoute
 import my.routes.house.dataclass.Route
+import my.routes.house.service.all.App.Companion.playDefaultSound
 import org.jetbrains.anko.padding
 
 object AddNewRoutePoint {
@@ -57,8 +58,8 @@ object AddNewRoutePoint {
                 .set(PointRoute(idPoint, nameInsertPoint, descriptionEditText.text.toString(), latitude, longitude))
                 .addOnSuccessListener {
                     Toast.makeText(c, c.resources.getString(R.string.point_created) + " " + nameInsertPoint, Toast.LENGTH_LONG).show()
-                    c.startActivity(c.intent)
-                    c.finish()
+                    GetListPointCurrentRoute.getListPointsCurrentRoute(idRoute, c)
+                    playDefaultSound(c)
                 }
                 .addOnFailureListener { Toast.makeText(c, "Error, comment to Alexei Suzdalenko", Toast.LENGTH_LONG).show(); }
             dialog.dismiss()

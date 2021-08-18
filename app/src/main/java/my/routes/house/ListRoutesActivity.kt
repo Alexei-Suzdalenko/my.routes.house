@@ -1,5 +1,6 @@
 package my.routes.house
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -28,20 +29,11 @@ class ListRoutesActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.add_route -> {
-                Toast.makeText(this, resources.getString(R.string.add_route), Toast.LENGTH_LONG).show()
-                ListRoutes_ShowDialog.showdialog(this)
-                true
-            }
-            R.id.settings -> {
-                startActivity(Intent(this, AjustesActivity::class.java))
-                true
-            }
-            R.id.logout -> {
-                Firebase.auth.signOut()
-                startActivity(Intent(this, LoginActivity::class.java)); finish()
-                true
-            }
+            R.id.add_route -> { Toast.makeText(this, resources.getString(R.string.add_route), Toast.LENGTH_LONG).show(); ListRoutes_ShowDialog.showdialog(this); true; }
+            R.id.author -> { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.site)))); true; }
+            R.id.settings -> { startActivity(Intent(this, AjustesActivity::class.java)); true; }
+            R.id.logout -> { Firebase.auth.signOut(); startActivity(Intent(this, LoginActivity::class.java)); finish(); true; }
+            R.id.your_comment -> {startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=my.routes.house"))); true; }
             else -> super.onOptionsItemSelected(item)
         }
     }

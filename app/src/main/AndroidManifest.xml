@@ -24,18 +24,6 @@
             android:exported="true"
             android:label="@string/settings" />
         <activity
-            android:name=".ListRoutePointsActivity"
-            android:exported="true"
-            android:label="@string/add_route">
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
-        </activity>
-        <activity
             android:name=".ListRoutesActivity"
             android:exported="true"
             android:label="@string/list_routes" />
@@ -44,7 +32,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

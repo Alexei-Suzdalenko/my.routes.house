@@ -1,5 +1,6 @@
 package my.routes.house
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Build
@@ -36,18 +37,11 @@ class CurrentRouteActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.open_google_map -> {
-                startActivity(Intent(this, MapsActivity::class.java))
-                true
-            }
-            R.id.change_name -> {
-                changeRouteName(routeName, idRoute, this)
-                true
-            }
-            R.id.add_point -> {
-                addNewRoutePoint(idRoute, this)
-                true
-            }
+            R.id.open_google_map -> { startActivity(Intent(this, MapsActivity::class.java)); true; }
+            R.id.author -> { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.site)))); true; }
+            R.id.change_name -> { changeRouteName(routeName, idRoute, this); true; }
+            R.id.add_point -> { addNewRoutePoint(idRoute, this); true; }
+            R.id.your_comment -> {startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=my.routes.house"))); true; }
             else -> super.onOptionsItemSelected(item)
         }
     }

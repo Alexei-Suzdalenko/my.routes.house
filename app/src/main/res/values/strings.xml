@@ -33,4 +33,7 @@
     <string name="longitude">Longitud</string>
     <string name="not_points">Aún no tiene ningún punto de reparto creado. Crea alguno. Tenga en cuenta que el primer punto creado sera el punto de inicio de la ruta.</string>
     <string name="description">Descripcion</string>
+    <string name="author">Author</string>
+    <string name="your_comment">Tu comentario</string>
+    <string name="site">https://diseno-cantabria.web.app</string>
 </resources>
