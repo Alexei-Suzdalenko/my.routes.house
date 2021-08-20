@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rotte di consegna</string>
+    <string name="enter">Accedi con Google</string>
+    <string name="login_failed">"Login fallito"</string>.
+    <string name="list_routes">Lista delle rotte</string>
+    <string name="add_route">Aggiungere una nuova rotta</string>.
+    <string name="logout">Esci dall applicazione</string>.
+    <string name="write_name_route">Scrivere il nome della rotta</string>
+    <string name="cancel">Annulla</string>
+    <string name="new_route_added">route added</string>
+    <string name="dont_have_routes">Nessuna rotta creata ancora</string>
+    <string name="loading">Carico…</string>
+    <string name="zero_routes">Non hai ancora nessuna rotta creata</string>.
+    <string name="settings">Impostazioni</string>
+    <string name="open_google_map">Route in Google Maps</string>
+    <string name="change_name">Modifica il nome della rotta</string>.
+    <string name="add_point">aggiungere un nuovo punto</string>.
+    <string name="route_name_changed">Nome del percorso cambiato</string>
+    <string name="point_created">Nuovo punto creato</string>
+    <string name="add_new_point">Aggiungere un nuovo punto alla mappa</string>.
+    <string name="name">Nome</string>
+    <string name="latitude">Latitudine</string>
+    <string name="longitude">Longitudine</string>
+    <string name="not_points">Non hai ancora nessun punto di consegna creato. Crearne uno. Si noti che il primo punto creato sarà il punto di partenza del percorso.</string>
+    <string name="description">Descrizione</string>
+    <string name="author">Autore</string>
+    <string name="your_comment">Il tuo commento</string>
+    <string name="site">https://suzdalenko.com</string>
+</resources>

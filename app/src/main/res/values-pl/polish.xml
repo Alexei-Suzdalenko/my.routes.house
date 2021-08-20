@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Trasy dostaw</string>
+    <string name="enter">Log in with Google</string>.
+    <string name="login_failed">"Logowanie nie powiodło się"</string>
+    <string name="list_routes">Lista tras</string>
+    <string name="add_route">Dodaj nową trasę</string>.
+    <string name="logout">Wyjście z aplikacji</string>.
+    <string name="write_name_route">Wpisz nazwę trasy</string>
+    <string name="cancel">Anuluj</string>
+    <string name="new_route_added">dodana trasa</string>
+    <string name="dont_have_routes">Nie utworzono jeszcze żadnych tras</string>
+    <string name="loading">Ładowanie…</string>
+    <string name="zero_routes">Nie masz jeszcze utworzonych żadnych tras</string>.
+    <string name="settings">Settings</string>
+    <string name="open_google_map">Trasa w Google Maps</string>
+    <string name="change_name">Edytuj nazwę trasy</string>.
+    <string name="add_point">Dodaj nowy punkt</string>
+    <string name="route_name_changed">Nazwa trasy uległa zmianie</string>
+    <string name="point_created">Nowy punkt utworzony</string>
+    <string name="add_new_point">Dodaj nowy punkt do mapy</string>.
+    <string name="name">Nazwa</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="not_points">Nie masz jeszcze utworzonych żadnych punktów dostawy. Stwórz jeden. Zwróć uwagę, że pierwszy utworzony punkt będzie punktem początkowym trasy.</string>
+    <string name="description">Opis</string>
+    <string name="author">Autor</string>
+    <string name="your_comment">Twój komentarz</string>
+    <string name="site">https://suzdalenko.com</string>
+</resources>

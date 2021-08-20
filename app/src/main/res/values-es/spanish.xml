@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rutas repartidor</string>
+    <string name="enter">Entrar con Google</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="list_routes">Listado de Rutas</string>
+    <string name="add_route">Añadir nueva ruta</string>
+    <string name="logout">Salir de la aplicación</string>
+    <string name="write_name_route"> Escriba el nombre de la ruta </string>
+    <string name="cancel">Cancel</string>
+    <string name="new_route_added">ruta añadida</string>
+    <string name="dont_have_routes">Aún no tienes rutas creadas</string>
+    <string name="loading">Cargando…</string>
+    <string name="zero_routes">Aún no tienes rutas creadas</string>
+    <string name="settings">Ajustes</string>
+    <string name="open_google_map">Ruta en Google Maps</string>
+    <string name="change_name">Editar nombre de la ruta</string>
+    <string name="add_point">Añadir nuevo punto</string>
+    <string name="route_name_changed">Nombre de la ruta ha cambiado</string>
+    <string name="point_created">Nuevo punto creado</string>
+    <string name="add_new_point">Añadir nuevo punto en el mapa</string>
+    <string name="name">Nombre</string>
+    <string name="latitude">Latitud</string>
+    <string name="longitude">Longitud</string>
+    <string name="not_points">Aún no tiene ningún punto de reparto creado. Crea alguno. Tenga en cuenta que el primer punto creado sera el punto de inicio de la ruta.</string>
+    <string name="description">Descripcion</string>
+    <string name="author">Author</string>
+    <string name="your_comment">Tu comentario</string>
+    <string name="site">https://diseno-cantabria.web.app</string>
+</resources>

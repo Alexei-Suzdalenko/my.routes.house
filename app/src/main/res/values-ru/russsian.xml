@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Маршруты доставки</string>
+    <string name="enter">Войдите в систему с помощью Google</string>
+    <string name="login_failed">"Вход не удался"</string>
+    <string name="list_routes">Список маршрутов</string>
+    <string name="add_route">Добавить новый маршрут</string>
+    <string name="logout">Выход из приложения</string>
+    <string name="write_name_route">Запись имени маршрута</string>
+    <string name="cancel">Отмена</string>
+    <string name="new_route_added">маршрут добавлен</string>
+    <string name="dont_have_routes">Не создано еще маршрутов</string>
+    <string name="loading">Загрузка…</string>
+    <string name="zero_routes">Вы еще не создали ни одного маршрута</string>
+    <string name="settings">Настройки</string>
+    <string name="open_google_map">Проложить маршрут в Google Maps</string>
+    <string name="change_name">Редактировать название маршрута</string>
+    <string name="add_point">Добавить новую точку</string>
+    <string name="route_name_changed">Имя маршрута изменилось</string>
+    <string name="point_created">Новая точка создана</string>
+    <string name="add_new_point">Добавить новую точку на карту</string>
+    <string name="name">Имя</string>
+    <string name="latitude">Широта</string>
+    <string name="longitude">Долгота</string>
+    <string name="not_points">У вас еще нет созданных пунктов доставки. Создайте его. Обратите внимание, что первая созданная точка будет начальной точкой маршрута.</string>
+    <string name="description">Описание</string>
+    <string name="author">Автор</string>
+    <string name="your_comment">Ваш комментарий</string>.
+    <string name="site">https://suzdalenko.com</string>
+</resources>

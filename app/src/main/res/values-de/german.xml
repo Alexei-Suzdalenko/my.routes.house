@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zustellwege</string>
+    <string name="enter">Mit Google anmelden</string>
+    <string name="login_failed">"Anmeldung fehlgeschlagen"</string>
+    <string name="list_routes">Routenliste</string>
+    <string name="add_route">Neue Route hinzufügen</string>
+    <string name="logout">Anwendung beenden</string>
+    <string name="write_name_route">Name der Route schreiben</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="new_route_added">Route hinzugefügt</string>
+    <string name="dont_have_routes">Noch keine Routen erstellt</string>
+    <string name="loading">Laden…</string>
+    <string name="zero_routes">Sie haben noch keine Routen erstellt</string>
+    <string name="settings">Einstellungen</string>
+    <string name="open_google_map">Route in Google Maps</string>
+    <string name="change_name">Name der Route bearbeiten</string>
+    <string name="add_point">Neuen Punkt hinzufügen</string>
+    <string name="route_name_changed">Routenname geändert</string>
+    <string name="point_created">Neuer Punkt erstellt</string>
+    <string name="add_new_point">Neuen Punkt auf der Karte hinzufügen</string>
+    <string name="name">Name</string>
+    <string name="latitude">Breitengrad</string>
+    <string name="longitude">Längengrad</string>
+    <string name="not_points">Sie haben noch keine Lieferpunkte angelegt. Erstellen Sie eine. Beachten Sie, dass der erste erstellte Punkt der Startpunkt der Route sein wird.</string>
+    <string name="description">Beschreibung</string>
+    <string name="author">Autor</string>
+    <string name="your_comment">Ihr Kommentar</string>
+    <string name="site">https://suzdalenko.com</string>
+</resources>
