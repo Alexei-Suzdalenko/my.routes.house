@@ -35,7 +35,9 @@ object PutRouteToGoogleMap {
                     c.runOnUiThread { mMap.addPolyline(options); }
                 }
                 c.runOnUiThread{
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(App.ordenListPoint[0].latitude, App.ordenListPoint[0].longitude), 13F))
+                    if( App.ordenListPoint.size > 0){
+                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(App.ordenListPoint[0].latitude, App.ordenListPoint[0].longitude), 13F))
+                    }
                 }
             } catch (e: Exception){
                 i++; if(i < 11){ putRouteToGoogleMap(c, mMap); }

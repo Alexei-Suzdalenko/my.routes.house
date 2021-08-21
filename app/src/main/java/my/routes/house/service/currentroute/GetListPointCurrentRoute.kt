@@ -11,7 +11,10 @@ import my.routes.house.CurrentRouteActivity
 import my.routes.house.R
 import my.routes.house.dataclass.PointRoute
 import my.routes.house.service.all.App
+import my.routes.house.service.all.App.Companion.flatButtonClicked
+import my.routes.house.service.all.App.Companion.listRoutesLoaded
 import my.routes.house.service.all.App.Companion.pointList
+import my.routes.house.service.currentroute.CurrentPointClicked.clickCurrentPoint
 import my.routes.house.service.listroutes.ListRoutes_GetListRoutes
 object GetListPointCurrentRoute {
     fun getListPointsCurrentRoute(idRoute: String, c: CurrentRouteActivity){
@@ -19,12 +22,13 @@ object GetListPointCurrentRoute {
         val customRouteTextview = c.findViewById<TextView>(R.id.custom_route_textview)
         customRouteTextview.visibility = View.VISIBLE
         customRouteTextview.text = c.resources.getString(R.string.loading)
-        pointList = ArrayList()
+        listRoutesLoaded = false
         Firebase.firestore.collection("list_points").document(uid).collection(idRoute)
             .orderBy("id")
             .get()
             .addOnSuccessListener { documents ->
-                for (document in documents) {
+                pointList = ArrayList()
+                for ( document in documents ) {
                     val id = document.data["id"].toString()
                     val name = document.data["name"].toString()
                     val description =  document.data["description"].toString()
@@ -32,6 +36,7 @@ object GetListPointCurrentRoute {
                     val longitude = document.data["longitude"].toString().toDouble()
                     pointList.add(PointRoute(id, name, description, latitude, longitude))
                 }
+                listRoutesLoaded = true
                 if( documents.documents.size == 0 ){
                     customRouteTextview.visibility = View.VISIBLE
                     customRouteTextview.text = c.resources.getString(R.string.not_points)
@@ -39,6 +44,10 @@ object GetListPointCurrentRoute {
                     customRouteTextview.visibility = View.GONE
                     val pointsListView = c.findViewById<ListView>(R.id.list_points)
                         pointsListView.adapter = PointersListAdapter(c, pointList)
+                        if( flatButtonClicked ){
+                            pointsListView.setSelection(PointersListAdapter(c, pointList).count - 1); flatButtonClicked = false
+                        }
+                    clickCurrentPoint(idRoute, pointsListView, c, pointList)
                 }
             }
             .addOnFailureListener { getListPointsCurrentRoute(idRoute, c); Toast.makeText(c, "Error, comment to Alexei Suzdalenko", Toast.LENGTH_LONG).show(); }

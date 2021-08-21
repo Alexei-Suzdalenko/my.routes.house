@@ -1,4 +1,5 @@
 package my.routes.house.service.maps
+import android.util.Log
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
@@ -12,7 +13,7 @@ object SetMarker {
                 mMap.addMarker(
                     MarkerOptions()
                     .position(LatLng(App.ordenListPoint[0].latitude, App.ordenListPoint[0].longitude))
-                    .title("Inicio " + App.ordenListPoint[0].name)
+                    .title("Start " + App.ordenListPoint[0].name)
                     .snippet(App.ordenListPoint[0].description)
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)))
             } else {

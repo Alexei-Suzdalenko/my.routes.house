@@ -37,5 +37,22 @@
     <string name="your_comment">Your comment</string>
     <string name="site">https://suzdalenko.com</string>
 
+    <string name="followMe">Follow me</string>
+    <string name="doNotFollowMe">Do not follow me</string>
+    <string name="need_at_least_two_points">To display the route you need at least two points on the map</string>
+    <string name="add_point_begin">Create at least one point first, to be able to see it on the map</string>
+    <string name="try_again">Try again</string>
+    <string name="optimizacion_route">Route optimization</string>
+    <string name="route_optimizacion_legend">\n With route optimization enabled, the shortest and most convenient route from the starting point to the end of the route will be shown on the map \n\n If the route optimization is disabled, the route will be shown as it is in the route view, in the same order. </string>
+    <string name="optimizacion_active">Optimization enabled</string>
+    <string name="optimizacion_desabled">Optimization disabled</string>
+    <string name="edit_point">Edit</string>
+    <string name="delete_point">Delete</string>
+    <string name="choose_option">Choose option</string>
+    <string name="none">" "</string>
+    <string name="point_updated">Updated</string>
+    <string name="delete_point_yes">Are you sure you want to eliminate ?</string>
+    <string name="deleted">Deleted</string>
+
 
 </resources>

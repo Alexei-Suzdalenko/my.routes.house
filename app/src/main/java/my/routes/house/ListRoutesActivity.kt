@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_list_routes.*
 import my.routes.house.service.listroutes.ListRoutes_GetListRoutes.Companion.getListRoutes
 import my.routes.house.service.listroutes.ListRoutes_ShowDialog
 class ListRoutesActivity : AppCompatActivity() {
@@ -15,6 +16,7 @@ class ListRoutesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_routes)
+        add_new_route_fab.setOnClickListener { Toast.makeText(this, resources.getString(R.string.add_route), Toast.LENGTH_LONG).show(); ListRoutes_ShowDialog.showdialog(this);  }
     }
 
     override fun onResume() {
@@ -29,7 +31,7 @@ class ListRoutesActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.add_route -> { Toast.makeText(this, resources.getString(R.string.add_route), Toast.LENGTH_LONG).show(); ListRoutes_ShowDialog.showdialog(this); true; }
+         //   R.id.add_route -> { Toast.makeText(this, resources.getString(R.string.add_route), Toast.LENGTH_LONG).show(); ListRoutes_ShowDialog.showdialog(this); true; }
             R.id.author -> { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.site)))); true; }
             R.id.settings -> { startActivity(Intent(this, AjustesActivity::class.java)); true; }
             R.id.logout -> { Firebase.auth.signOut(); startActivity(Intent(this, LoginActivity::class.java)); finish(); true; }
