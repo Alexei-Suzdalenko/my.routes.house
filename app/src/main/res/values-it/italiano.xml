@@ -27,4 +27,21 @@
     <string name="author">Autore</string>
     <string name="your_comment">Il tuo commento</string>
     <string name="site">https://suzdalenko.com</string>
+
+    <string name="followMe">Seguimi</string>
+    <string name="doNotFollowMe">Non seguirmi</string>
+    <string name="need_at_least_two_points">Per visualizzare il percorso sono necessari almeno due punti sulla mappa</string>.
+    <string name="add_point_begin">Crea prima almeno un punto, per poterlo vedere sulla mappa</string>
+    <string name="try_again">Prova di nuovo</string>
+    <string name="optimizacion_route">Ottimizzazione del percorso</string>
+    <string name="route_optimizacion_legend">\n Con l ottimizzazione del percorso abilitata, il percorso più breve e conveniente dal punto di partenza alla fine del percorso sarà mostrato sulla mappa \n\n Se l ottimizzazione del percorso è disabilitata, il percorso sarà mostrato così com è nella vista del percorso, nello stesso ordine. </string>
+    <string name="optimizacion_active">Ottimizzazione abilitata</string>
+    <string name="optimizacion_desabled">Ottimizzazione disabilitata</string>
+    <string name="edit_point">Modifica</string>
+    <string name="delete_point">Cancella</string>
+    <string name="choose_option">Scegli l opzione</string>
+    <string name="none">""</string>
+    <string name="point_updated">Aggiornato</string>
+    <string name="delete_point_yes">Sei sicuro di voler eliminare?</string>
+    <string name="deleted">Eliminato</string>
 </resources>

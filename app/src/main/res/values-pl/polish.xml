@@ -27,4 +27,21 @@
     <string name="author">Autor</string>
     <string name="your_comment">Twój komentarz</string>
     <string name="site">https://suzdalenko.com</string>
+
+    <string name="followMe">Śledź mnie</string>
+    <string name="doNotFollowMe">Nie podążaj za mną</string>.
+    <string name="need_at_least_two_points">Aby wyświetlić trasę potrzebujesz co najmniej dwóch punktów na mapie</string>
+    <string name="add_point_begin">Stwórz najpierw przynajmniej jeden punkt, aby móc go zobaczyć na mapie</string>.
+    <string name="try_again">Spróbuj ponownie</string>.
+    <string name="optimizacion_route">Optymalizacja trasy</string>.
+    <string name="route_optimizacion_legend">Jeśli optymalizacja trasy jest włączona, na mapie zostanie wyświetlona najkrótsza i najwygodniejsza trasa od punktu początkowego do końca trasy. Jeśli optymalizacja trasy jest wyłączona, trasa zostanie wyświetlona tak, jak w widoku trasy, w tej samej kolejności. </string>
+    <string name="optimizacion_active">Optymalizacja włączona</string>
+    <string name="optimizacion_desabled">Optymalizacja wyłączona</string>
+    <string name="edit_point">Edytuj</string>
+    <string name="delete_point">Usuń</string>
+    <string name="choose_option">Wybierz opcję</string>
+    <string name="none">""</string>
+    <string name="point_updated">Uaktualniony</string>
+    <string name="delete_point_yes">Czy na pewno chcesz usunąć ?</string>
+    <string name="deleted">Usunięty</string>
 </resources>

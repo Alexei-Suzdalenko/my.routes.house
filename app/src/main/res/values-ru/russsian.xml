@@ -27,4 +27,21 @@
     <string name="author">Автор</string>
     <string name="your_comment">Ваш комментарий</string>.
     <string name="site">https://suzdalenko.com</string>
+
+    <string name="followMe">Следите за мной</string>
+    <string name="doNotFollowMe">Не следуйте за мной</string>.
+    <string name="need_at_least_two_points">Для отображения маршрута вам нужно как минимум две точки на карте</string>.
+    <string name="add_point_begin">Сначала создайте хотя бы одну точку, чтобы иметь возможность увидеть ее на карте</string>.
+    <string name="try_again">Попробуйте еще раз</string>
+    <string name="optimizacion_route">Оптимизация маршрута</string>
+    <string name="route_optimizacion_legend">\n При включенной оптимизации маршрута на карте будет показан самый короткий и удобный путь от начальной точки до конечной точки маршрута,\n\n Если оптимизация маршрута отключена, маршрут будет показан в том же порядке, что и в представлении маршрута. </string>
+    <string name="optimizacion_active">Оптимизация включена</string>
+    <string name="optimizacion_desabled">Оптимизация отключена</string>
+    <string name="edit_point">Редактировать</string>
+    <string name="delete_point">Удалить</string>
+    <string name="choose_option">Выбор опции</string>
+    <string name="none">""</string>
+    <string name="point_updated">Обновлено</string>
+    <string name="delete_point_yes">Вы уверены, что хотите удалить?</string>
+    <string name="deleted">Удалено</string>
 </resources>

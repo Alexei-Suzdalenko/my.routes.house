@@ -27,4 +27,21 @@
     <string name="author">Author</string>
     <string name="your_comment">Tu comentario</string>
     <string name="site">https://diseno-cantabria.web.app</string>
+
+    <string name="followMe">Seguirme</string>
+    <string name="doNotFollowMe">No me sigas</string>
+    <string name="need_at_least_two_points">Para mostrar la ruta necesitas al menos dos puntos en el mapa</string>
+    <string name="add_point_begin">Crea primero al menos un punto para poder verlo en el mapa</string>
+    <string name="try_again">Intentar de nuevo</string>
+    <string name="optimizacion_route">Optimización de la ruta</string>
+    <string name="route_optimizacion_legend">\NCon la optimización de la ruta activada, se mostrará en el mapa la ruta más corta y conveniente desde el punto de partida hasta el final de la ruta\NSi la optimización de la ruta está desactivada, la ruta se mostrará tal y como está en la vista de la ruta, en el mismo orden. </string>
+    <string name="optimizacion_active">Optimización activada</string>
+    <string name="optimizacion_desabled">Optimización desactivada</string>
+    <string name="edit_point">Editar</string>
+    <string name="delete_point">Borrar</string>
+    <string name="choose_option">Elegir opción</string>
+    <string name="none">" "</string>
+    <string name="point_updated">Actualizado</string>
+    <string name="delete_point_yes">¿Está seguro de querer eliminar?</string>
+    <string name="deleted">Eliminado</string>
 </resources>

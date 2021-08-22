@@ -27,4 +27,21 @@
     <string name="author">Author</string>
     <string name="your_comment">Votre commentaire</string>
     <string name="site">https://suzdalenko.com</string>
+
+    <string name="followMe">Suivez-moi</string>
+    <string name="doNotFollowMe">Ne me suivez pas</string>
+    <string name="need_at_least_two_points">Pour afficher l itinéraire, il faut au moins deux points sur la carte</string>.
+    <string name="add_point_begin">Créer d abord au moins un point, pour pouvoir le voir sur la carte</string>.
+    <string name="try_again">Essayez à nouveau</string>
+    <string name="optimizacion_route">Optimisation de la route</string>
+    <string name="route_optimizacion_legend">\n Avec l optimisation d itinéraire activée, l itinéraire le plus court et le plus pratique du point de départ à la fin de l itinéraire sera affiché sur la carte \n\n\n Si l optimisation d itinéraire est désactivée, l itinéraire sera affiché tel qu il est dans la vue d itinéraire, dans le même ordre. </string>
+    <string name="optimizacion_active">Optimisation activée</string>
+    <string name="optimizacion_desabled">Optimisation désactivée</string>
+    <string name="edit_point">Editer</string>
+    <string name="delete_point">Delete</string>
+    <string name="choose_option">Choisir une option</string>
+    <string name="none">" "</string>
+    <string name="point_updated">Mise à jour</string>
+    <string name="delete_point_yes">Etes-vous sûr de vouloir éliminer ?</string>
+    <string name="deleted">Supprimé</string>
 </resources>

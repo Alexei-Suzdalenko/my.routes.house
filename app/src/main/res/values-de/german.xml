@@ -27,4 +27,21 @@
     <string name="author">Autor</string>
     <string name="your_comment">Ihr Kommentar</string>
     <string name="site">https://suzdalenko.com</string>
+
+    <string name="followMe">Folgt mir</string>
+    <string name="doNotFollowMe">Folgt mir nicht</string>
+    <string name="need_at_least_two_points">Um die Route anzuzeigen, benötigen Sie mindestens zwei Punkte auf der Karte</string>
+    <string name="add_point_begin">Erstelle zuerst mindestens einen Punkt, um ihn auf der Karte sehen zu können</string>
+    <string name="try_again">Neu versuchen</string>
+    <string name="optimizacion_route">Routenoptimierung</string>
+    <string name="route_optimizacion_legend">Wenn die Routenoptimierung aktiviert ist, wird die kürzeste und bequemste Route vom Startpunkt bis zum Ende der Route auf der Karte angezeigt \n\n Wenn die Routenoptimierung deaktiviert ist, wird die Route in der gleichen Reihenfolge wie in der Routenansicht angezeigt. </string>
+    <string name="optimizacion_active">Optimierung aktiviert</string>
+    <string name="optimizacion_desabled">Optimierung ausgeschaltet</string>
+    <string name="edit_point">Bearbeiten</string>
+    <string name="delete_point">Löschen</string>
+    <string name="choose_option">Wählen Sie eine Option</string>
+    <string name="none">" "</string>
+    <string name="point_updated">Aktualisiert</string>
+    <string name="delete_point_yes">Sind Sie sicher, dass Sie den Punkt löschen wollen?</string>
+    <string name="deleted">Gelöscht</string>
 </resources>
