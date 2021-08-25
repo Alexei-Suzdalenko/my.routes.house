@@ -47,7 +47,7 @@ object ShowMeOptionsEditPoint {
             val longitude =  longitudeEditText.text.toString().replace(',', '.').toDouble()
             val latitude = latitudeEditText.text.toString().replace(',', '.').toDouble()
             Firebase.firestore.collection("list_points").document(uid).collection(idRoute).document(idPoint)
-                .set(PointRoute(idPoint, nameInsertPoint, descriptionEditText.text.toString(), latitude, longitude))
+                .set(PointRoute(idPoint, nameInsertPoint, descriptionEditText.text.toString(), latitude, longitude, "", "", ""))
                 .addOnSuccessListener {
                     Toast.makeText(c, c.resources.getString(R.string.point_updated) + " " + nameInsertPoint, Toast.LENGTH_LONG).show()
                     GetListPointCurrentRoute.getListPointsCurrentRoute(idRoute, c)

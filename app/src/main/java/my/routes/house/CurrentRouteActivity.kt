@@ -3,30 +3,34 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Build
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.appcompat.app.ActionBar
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_current_route.*
 import my.routes.house.service.all.App
+import my.routes.house.service.all.App.Companion.editor
 import my.routes.house.service.all.App.Companion.flatButtonClicked
-import my.routes.house.service.currentroute.AddNewRoutePoint.addNewRoutePoint
+import my.routes.house.service.all.App.Companion.sharedPreferences
 import my.routes.house.service.currentroute.ChangeNameCurrentRoute.changeRouteName
 import my.routes.house.service.currentroute.GetListPointCurrentRoute.getListPointsCurrentRoute
-import my.routes.house.service.listroutes.ListRoutes_ShowDialog
+
 class CurrentRouteActivity : AppCompatActivity() {
     var routeName = ""; var idRoute = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_current_route)
 
+        editor.putString("idPoint", "none"); editor.apply()
         routeName = intent.getStringExtra("name").toString()
         idRoute   = intent.getStringExtra("id").toString()
+        if(routeName == "null" || idRoute == "null"){ routeName = sharedPreferences.getString("routeName", "").toString();  idRoute = sharedPreferences.getString("idRoute", "").toString(); }
+        else { editor.putString("routeName", routeName); editor.putString("idRoute", idRoute); editor.apply(); }
         supportActionBar?.title = routeName
-        add_new_point.setOnClickListener { flatButtonClicked= true;  addNewRoutePoint(idRoute, this);  }
+        add_new_point.setOnClickListener {
+            flatButtonClicked = true
+            val intent = Intent(this, AddPointToRouteActivity::class.java); startActivity(intent)
+           // addNewRoutePoint(idRoute, this)
+        }
     }
 
     override fun onResume() {

@@ -15,18 +15,19 @@ object CurrentPointClicked {
 
     fun clickCurrentPoint(idRoute: String, pointsListView: ListView, c: CurrentRouteActivity, pointList: ArrayList<PointRoute>) {
         pointsListView.setOnItemClickListener { _, _, i, _ ->
-            val arrayOptions = arrayOf ( c.resources.getString(R.string.edit_point), c.resources.getString(R.string.none), c.resources.getString(R.string.delete_point ) )
+            val arrayOptions = arrayOf ( c.resources.getString(R.string.edit_point), c.resources.getString(R.string.show_in_map ), c.resources.getString(R.string.none), c.resources.getString(R.string.delete_point ) )
             AlertDialog.Builder(c)
                 .setTitle(R.string.choose_option)
                 .setItems( arrayOptions) { dialog, which ->
                     if( which == 0 ) showMeOptionsEditPoint(idRoute,  c , pointList[i] )
-                    if( which == 2 ) showMeOptionsRemovePoint( idRoute,  c , pointList[i]  )
+                    if( which == 1 ) Toast.makeText(c, "show in map", Toast.LENGTH_LONG).show()
+                    if( which == 3 ) showMeOptionsRemovePoint( idRoute,  c , pointList[i]  )
                     dialog.dismiss()
                 }.create().show()
         }
     }
 
-    private fun showMeOptionsRemovePoint(idRoute: String, c: CurrentRouteActivity, pointRoute: PointRoute ){
+    private fun showMeOptionsRemovePoint(idRoute: String, c: CurrentRouteActivity, pointRoute: PointRoute ) {
         AlertDialog.Builder(c)
             .setTitle(R.string.delete_point)
             .setMessage(pointRoute.name)

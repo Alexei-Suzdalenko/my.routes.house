@@ -34,7 +34,7 @@ object GetListPointCurrentRoute {
                     val description =  document.data["description"].toString()
                     val latitude = document.data["latitude"].toString().toDouble()
                     val longitude = document.data["longitude"].toString().toDouble()
-                    pointList.add(PointRoute(id, name, description, latitude, longitude))
+                    pointList.add(PointRoute(id, name, description, latitude, longitude, "", "", ""))
                 }
                 listRoutesLoaded = true
                 if( documents.documents.size == 0 ){
