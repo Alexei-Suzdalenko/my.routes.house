@@ -23,10 +23,7 @@ object GetListPointCurrentRoute {
         customRouteTextview.visibility = View.VISIBLE
         customRouteTextview.text = c.resources.getString(R.string.loading)
         listRoutesLoaded = false
-        Firebase.firestore.collection("list_points").document(uid).collection(idRoute)
-            .orderBy("id")
-            .get()
-            .addOnSuccessListener { documents ->
+        Firebase.firestore.collection("list_points").document(uid).collection(idRoute).orderBy("id").get().addOnSuccessListener { documents ->
                 pointList = ArrayList()
                 for ( document in documents ) {
                     val id = document.data["id"].toString()
@@ -34,7 +31,10 @@ object GetListPointCurrentRoute {
                     val description =  document.data["description"].toString()
                     val latitude = document.data["latitude"].toString().toDouble()
                     val longitude = document.data["longitude"].toString().toDouble()
-                    pointList.add(PointRoute(id, name, description, latitude, longitude, "", "", ""))
+                    val zipcode = document.data["zipcode"].toString()
+                    val city = document.data["city"].toString()
+                    val address = document.data["address"].toString()
+                    pointList.add(PointRoute(id, name, description, latitude, longitude, zipcode, city, address))
                 }
                 listRoutesLoaded = true
                 if( documents.documents.size == 0 ){

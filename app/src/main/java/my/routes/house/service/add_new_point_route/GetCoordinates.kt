@@ -1,15 +1,13 @@
 package my.routes.house.service.add_new_point_route
-import android.util.Log
 import android.widget.EditText
 import android.widget.Toast
-import com.google.android.gms.maps.model.LatLng
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_add_point_to_route.*
 import org.json.JSONObject
 import java.net.URL
-import my.routes.house.AddPointToRouteActivity
+import my.routes.house.service.currentroute.activities.AddPointToRouteActivity
 import my.routes.house.R
 import my.routes.house.dataclass.PointRoute
 import my.routes.house.service.all.App

@@ -1,4 +1,7 @@
 package my.routes.house.dataclass
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+@Parcelize
 data class PointRoute (
     var id: String,
     var name: String,
@@ -7,5 +10,5 @@ data class PointRoute (
     var longitude: Double,
     var zipcode: String,
     var city: String,
-    var address: String
-        )
+    var address: String,
+        ) : Parcelable

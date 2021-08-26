@@ -26,7 +26,11 @@ class PointersListAdapter (private val c: Context, private val listPoints: Array
         val namePoint        = rowMain.findViewById<TextView>(R.id.name_point)
             namePoint.text   = listPoints.get(index = p0).name
         val description      = rowMain.findViewById<TextView>(R.id.description_point)
-            description.text = listPoints.get(index = p0).description.toString()
+             description.text = listPoints.get(index = p0).description.toString()
+        val city      = rowMain.findViewById<TextView>(R.id.city)
+             city.text = listPoints.get(index = p0).city.toString()
+        val address      = rowMain.findViewById<TextView>(R.id.address)
+             address.text = listPoints.get(index = p0).address.toString()
         val latitude         = rowMain.findViewById<TextView>(R.id.latitude_point)
             latitude.text    = "Lat: " + listPoints.get(index = p0).latitude.toString()
         val longitude        = rowMain.findViewById<TextView>(R.id.longitude_point)

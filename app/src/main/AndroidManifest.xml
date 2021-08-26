@@ -17,16 +17,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Myrouteshouse">
         <activity
-            android:name=".EditSelectedPointActivity"
+            android:name=".service.currentroute.activities.DetailPointActivity"
             android:exported="true" />
         <activity
-            android:name=".SeeOnMapPointActivity"
+            android:name=".service.currentroute.activities.EditSelectedPointActivity"
+            android:exported="true" />
+        <activity
+            android:name=".service.currentroute.activities.SeeOnMapPointActivity"
             android:exported="true" />
         <activity
             android:name=".CurrentRouteActivity"
             android:exported="true" />
         <activity
-            android:name=".AddPointToRouteActivity"
+            android:name=".service.currentroute.activities.AddPointToRouteActivity"
             android:exported="true"
             android:label="@string/add_new_point"
             android:parentActivityName=".CurrentRouteActivity" />

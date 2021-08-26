@@ -13,6 +13,7 @@ import my.routes.house.service.all.App.Companion.flatButtonClicked
 import my.routes.house.service.all.App.Companion.sharedPreferences
 import my.routes.house.service.currentroute.ChangeNameCurrentRoute.changeRouteName
 import my.routes.house.service.currentroute.GetListPointCurrentRoute.getListPointsCurrentRoute
+import my.routes.house.service.currentroute.activities.AddPointToRouteActivity
 
 class CurrentRouteActivity : AppCompatActivity() {
     var routeName = ""; var idRoute = ""
@@ -26,6 +27,7 @@ class CurrentRouteActivity : AppCompatActivity() {
         if(routeName == "null" || idRoute == "null"){ routeName = sharedPreferences.getString("routeName", "").toString();  idRoute = sharedPreferences.getString("idRoute", "").toString(); }
         else { editor.putString("routeName", routeName); editor.putString("idRoute", idRoute); editor.apply(); }
         supportActionBar?.title = routeName
+
         add_new_point.setOnClickListener {
             flatButtonClicked = true
             val intent = Intent(this, AddPointToRouteActivity::class.java); startActivity(intent)

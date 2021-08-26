@@ -60,6 +60,8 @@
     <string name="get_coordinates">Get coordinates</string>
     <string name="show_in_map">See on the map</string>
     <string name="save">Save</string>
+    <string name="detail">Detail</string>
+    <string name="gotopoint">"Go to "</string>
 
 
 </resources>
