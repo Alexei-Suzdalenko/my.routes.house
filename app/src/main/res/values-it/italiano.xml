@@ -44,4 +44,15 @@
     <string name="point_updated">Aggiornato</string>
     <string name="delete_point_yes">Sei sicuro di voler eliminare?</string>
     <string name="deleted">Eliminato</string>
+
+    <string name="required_description">Campi obbligatori</string>
+    <string name="zip_code">Codice postale</string>
+    <string name="city">Città</string>
+    <string name="address">Indirizzo</string>
+    <string name="get_coordinates">Ottieni coordinate</string>
+    <string name="show_in_map">Guarda sulla mappa</string>
+    <string name="save">Salva</string>
+    <string name="detail">Dettagli</string>
+    <string name="gotopoint">"Vai a "</string>
+    <string name="point_edited">Il punto è modificato</string>
 </resources>

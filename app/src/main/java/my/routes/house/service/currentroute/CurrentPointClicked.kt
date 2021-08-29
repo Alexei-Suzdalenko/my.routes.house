@@ -2,6 +2,7 @@ package my.routes.house.service.currentroute
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
+import android.util.Log
 import android.widget.ListView
 import android.widget.Toast
 import com.google.firebase.auth.ktx.auth
@@ -11,20 +12,23 @@ import my.routes.house.CurrentRouteActivity
 import my.routes.house.R
 import my.routes.house.dataclass.PointRoute
 import my.routes.house.service.all.App
+import my.routes.house.service.all.App.Companion.pointRouteEmptyApp
 import my.routes.house.service.currentroute.ShowMeOptionsEditPoint.showMeOptionsEditPoint
-object CurrentPointClicked {
+import my.routes.house.service.currentroute.activities.DetailPointActivity
+import my.routes.house.service.currentroute.activities.EditSelectedPointActivity
+import my.routes.house.service.currentroute.activities.SeeOnMapPointActivity
 
+object CurrentPointClicked {
     fun clickCurrentPoint(idRoute: String, pointsListView: ListView, c: CurrentRouteActivity, pointList: ArrayList<PointRoute>) {
         pointsListView.setOnItemClickListener { _, _, i, _ ->
-            val arrayOptions = arrayOf ( c.resources.getString(R.string.gotopoint), c.resources.getString(R.string.detail), c.resources.getString(R.string.show_in_map ), c.resources.getString(R.string.none), c.resources.getString(R.string.edit_point), c.resources.getString(R.string.none), c.resources.getString(R.string.delete_point ) )
+            val arrayOptions = arrayOf ( c.resources.getString(R.string.detail), c.resources.getString(R.string.show_in_map ), c.resources.getString(R.string.none), c.resources.getString(R.string.edit_point), c.resources.getString(R.string.none), c.resources.getString(R.string.delete_point ) )
             AlertDialog.Builder(c).setTitle(R.string.choose_option).setItems( arrayOptions) { dialog, which ->
-                    if ( which == 0 ) {
-                        // val intent = Intent(c, ) https://www.google.com/maps/dir/@35.0157332,-5.6816575
-                    }
-                    if( which == 1 ) Toast.makeText(c, "detail", Toast.LENGTH_LONG).show()
-                    if( which == 2 ) Toast.makeText(c, "show in map", Toast.LENGTH_LONG).show()
-                    if( which == 4 ) showMeOptionsEditPoint(idRoute,  c , pointList[i] )
-                    if( which == 6 ) showMeOptionsRemovePoint( idRoute,  c , pointList[i]  )
+                pointRouteEmptyApp = pointList[i]
+                App.editor.putString("idPoint", pointList[i].id); App.editor.apply()
+                    if( which == 0 ) c.startActivity( Intent( c, DetailPointActivity::class.java ))
+                    if( which == 1 ) c.startActivity( Intent( c, SeeOnMapPointActivity::class.java ))
+                    if( which == 3 ) c.startActivity( Intent( c, EditSelectedPointActivity::class.java ))
+                    if( which == 5 ) showMeOptionsRemovePoint( idRoute,  c , pointList[i]  )
                     dialog.dismiss()
                 }.create().show()
         }

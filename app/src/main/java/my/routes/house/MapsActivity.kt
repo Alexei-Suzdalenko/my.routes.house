@@ -31,6 +31,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLoca
 
         prepareArrayMaps()
         followMeButtonLogic(this)
+        title = ""
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
@@ -46,7 +47,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMyLoca
     override fun onMyLocationClick(p0: Location) {}
 
     fun putCamaraToCurrentPosition(latLng: LatLng){
-        if (App.sharedPreferences.getBoolean("is_enabled", false)) mMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13F))
+        if (App.sharedPreferences.getBoolean("is_enabled", false)) mMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16F))
     }
 }
 

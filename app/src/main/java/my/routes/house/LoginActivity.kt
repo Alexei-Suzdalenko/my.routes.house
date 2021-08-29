@@ -99,7 +99,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun updateUI(){
-        Toast.makeText(this, "Buenos dias " + auth.currentUser!!.displayName, Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "\uD83D\uDE0A " + auth.currentUser!!.displayName, Toast.LENGTH_LONG).show()
         startActivity(Intent(this, ListRoutesActivity::class.java))
         finish()
     }

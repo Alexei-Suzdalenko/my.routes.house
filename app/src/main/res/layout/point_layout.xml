@@ -21,7 +21,7 @@
         android:orientation="vertical">
         <TextView
             android:padding="1dp"
-            android:textColor="@color/blue"
+            android:textColor="@color/teal_200"
             android:textStyle="bold"
             android:textSize="18sp"
             android:text="@string/app_name"
@@ -33,7 +33,7 @@
         <TextView
             android:maxLines="1"
             android:padding="1dp"
-            android:textColor="@color/blue"
+            android:textColor="@color/teal_200"
             android:textStyle="bold"
             android:textSize="16sp"
             android:text="@string/description"
@@ -44,7 +44,7 @@
         <TextView
             android:maxLines="1"
             android:padding="2dp"
-            android:textColor="@color/blue"
+            android:textColor="@color/teal_200"
             android:textStyle="bold"
             android:textSize="16sp"
             android:text="@string/city"
@@ -55,7 +55,7 @@
         <TextView
             android:maxLines="1"
             android:padding="2dp"
-            android:textColor="@color/blue"
+            android:textColor="@color/teal_200"
             android:textStyle="bold"
             android:textSize="16sp"
             android:text="@string/address"
@@ -71,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:textColor="@color/blue"
+                android:textColor="@color/teal_200"
                 android:maxLines="1"
                 android:id="@+id/latitude_point"
                 android:textSize="13dp"
@@ -80,7 +80,7 @@
                 android:text="@string/latitude"
                 android:layout_height="wrap_content" />
             <TextView
-                android:textColor="@color/blue"
+                android:textColor="@color/teal_200"
                 android:maxLines="1"
                 android:id="@+id/longitude_point"
                 android:textSize="13dp"

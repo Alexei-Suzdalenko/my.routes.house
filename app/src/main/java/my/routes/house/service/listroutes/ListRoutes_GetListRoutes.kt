@@ -11,6 +11,7 @@ import my.routes.house.CurrentRouteActivity
 import my.routes.house.ListRoutesActivity
 import my.routes.house.R
 import my.routes.house.dataclass.Route
+import my.routes.house.service.all.App
 import kotlin.collections.ArrayList
 class ListRoutes_GetListRoutes {
     companion object {
@@ -44,12 +45,15 @@ class ListRoutes_GetListRoutes {
         }
         fun showZeroroutes(textView: TextView){
             textView.visibility = View.VISIBLE
-            textView.setText(textView.resources.getString(R.string.zero_routes))
+            textView.text = textView.resources.getString(R.string.zero_routes)
         }
         fun routesLoaded(textView: TextView, listView: ListView, listRoutesPrepared: ArrayList<Route>, c: ListRoutesActivity){
             textView.visibility = View.GONE
             listView.adapter = RouterListAdapter(c, listRoutesPrepared)
             listView.setOnItemClickListener { _, _, i, _ ->
+                App.editor.putString("routeName", listRoutesPrepared[i].name)
+                App.editor.putString("idRoute", listRoutesPrepared[i].id)
+                App.editor.apply();
                 val intent = Intent(c, CurrentRouteActivity::class.java)
                     intent.putExtra("id", listRoutesPrepared[i].id)
                     intent.putExtra("name", listRoutesPrepared[i].name)

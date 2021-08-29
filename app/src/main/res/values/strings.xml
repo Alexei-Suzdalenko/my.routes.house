@@ -53,7 +53,8 @@
     <string name="point_updated">Updated</string>
     <string name="delete_point_yes">Are you sure you want to eliminate ?</string>
     <string name="deleted">Deleted</string>
-    <string name="required_description">* Required fields</string>
+
+    <string name="required_description">Required fields</string>
     <string name="zip_code">Zip code</string>
     <string name="city">City</string>
     <string name="address">Address</string>
@@ -62,6 +63,7 @@
     <string name="save">Save</string>
     <string name="detail">Detail</string>
     <string name="gotopoint">"Go to "</string>
+    <string name="point_edited">The point is edited</string>
 
 
 </resources>

@@ -44,4 +44,15 @@
     <string name="point_updated">Обновлено</string>
     <string name="delete_point_yes">Вы уверены, что хотите удалить?</string>
     <string name="deleted">Удалено</string>
+
+    <string name = "required_description"> Обязательные поля </string>
+    <string name = "zip_code"> Почтовый индекс </string>
+    <string name = "city"> Город </string>
+    <string name = "address"> Адрес </string>
+    <string name = "get_coordinates"> Получить координаты </string>
+    <string name = "show_in_map"> Посмотреть на карте </string>
+    <string name = "save"> Сохранить </string>
+    <string name = "detail"> Подробно </string>
+    <string name = "gotopoint"> "Перейти к" </string>
+    <string name = "point_edited"> Точка редактируется </string>
 </resources>

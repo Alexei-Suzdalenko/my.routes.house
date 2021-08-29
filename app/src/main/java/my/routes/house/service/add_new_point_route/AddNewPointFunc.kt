@@ -12,7 +12,6 @@ import my.routes.house.service.all.App
 
 object AddNewPointFunc {
     val uid = Firebase.auth.currentUser!!.uid
-    val idRoute = App.sharedPreferences.getString("idRoute", "").toString()
 
     fun addNewPointFuncnality(c: AddPointToRouteActivity) {
         // get coordinates button in add new point page
@@ -23,11 +22,8 @@ object AddNewPointFunc {
         c.save_new_point.setOnClickListener {
             val nameInsertPoint = c.nameEditText.text.toString()
             if( nameInsertPoint.isBlank() ) return@setOnClickListener
-            var idPoint = App.sharedPreferences.getString("idPoint", "none").toString()
-                  if( idPoint == "none" ) {
-                      idPoint = System.currentTimeMillis().toString()
-                      App.editor.putString("idPoint", idPoint); App.editor.apply()
-                  }
+            val idPoint  = System.currentTimeMillis().toString()
+
             var latitude = 0.0 ; var longitude = 0.0
             try {
                  latitude = c.latitudeEditText.text.toString().replace(',', '.').toDouble()
@@ -38,6 +34,7 @@ object AddNewPointFunc {
             val city = c.city.text.toString()
             val address = c.address.text.toString()
 
+            val idRoute = App.sharedPreferences.getString("idRoute", "").toString()
             Firebase.firestore.collection("list_points").document(uid).collection(idRoute).document(idPoint)
                 .set(PointRoute(idPoint, nameInsertPoint, c.descriptionEditText.text.toString(), latitude, longitude, zipcode, city, address))
                 .addOnSuccessListener {

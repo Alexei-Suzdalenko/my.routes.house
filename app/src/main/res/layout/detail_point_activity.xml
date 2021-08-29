@@ -10,43 +10,66 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
         <TextView
-            android:text="@string/required_description"
+            android:layout_marginTop="33dp"
+            android:textSize="21sp"
+            android:textColor="@color/teal_200"
+            android:textStyle="bold"
+            android:id="@+id/nameDetail"
+            android:text="@string/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
-            android:id="@+id/nameEditText"
-            android:hint="@string/name"
+            android:layout_marginTop="11dp"
+            android:textColor="@color/teal_200"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:id="@+id/descriptionDetail"
+            android:text="@string/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
-            android:id="@+id/descriptionEditText"
-            android:hint="@string/description"
+            android:layout_marginTop="11dp"
+            android:textColor="@color/teal_200"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:id="@+id/zipcodeDetail"
+            android:text="@string/zip_code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
-            android:id="@+id/zipcode"
-            android:hint="@string/zip_code"
+            android:layout_marginTop="11dp"
+            android:textColor="@color/teal_200"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:id="@+id/cityDetail"
+            android:text="@string/city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
-            android:id="@+id/city"
-            android:hint="@string/city"
+            android:layout_marginTop="11dp"
+            android:textColor="@color/teal_200"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:id="@+id/addressDetail"
+            android:text="@string/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
-            android:id="@+id/address"
-            android:hint="@string/address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/latitudeEditText"
-            android:hint="@string/latitude"
+            android:layout_marginTop="11dp"
+            android:textColor="@color/teal_200"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:id="@+id/latitudeDetail"
+            android:text="@string/latitude"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
-            android:id="@+id/longitudeEditText"
-            android:hint="@string/longitude"
+            android:layout_marginTop="11dp"
+            android:textColor="@color/teal_200"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:id="@+id/longitudeDetail"
+            android:text="@string/longitude"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>

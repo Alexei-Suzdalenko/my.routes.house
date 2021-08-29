@@ -47,6 +47,7 @@ object GetListPointCurrentRoute {
                         if( flatButtonClicked ){
                             pointsListView.setSelection(PointersListAdapter(c, pointList).count - 1); flatButtonClicked = false
                         }
+                    // actions from lists current route
                     clickCurrentPoint(idRoute, pointsListView, c, pointList)
                 }
             }

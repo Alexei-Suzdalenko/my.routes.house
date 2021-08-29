@@ -14,9 +14,7 @@ import my.routes.house.service.all.App.Companion.sharedPreferences
 import my.routes.house.service.currentroute.ChangeNameCurrentRoute.changeRouteName
 import my.routes.house.service.currentroute.GetListPointCurrentRoute.getListPointsCurrentRoute
 import my.routes.house.service.currentroute.activities.AddPointToRouteActivity
-
-class CurrentRouteActivity : AppCompatActivity() {
-    var routeName = ""; var idRoute = ""
+class CurrentRouteActivity : AppCompatActivity() { var routeName = ""; var idRoute = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_current_route)
@@ -28,11 +26,8 @@ class CurrentRouteActivity : AppCompatActivity() {
         else { editor.putString("routeName", routeName); editor.putString("idRoute", idRoute); editor.apply(); }
         supportActionBar?.title = routeName
 
-        add_new_point.setOnClickListener {
-            flatButtonClicked = true
-            val intent = Intent(this, AddPointToRouteActivity::class.java); startActivity(intent)
-           // addNewRoutePoint(idRoute, this)
-        }
+        add_new_point.setOnClickListener { flatButtonClicked = true; startActivity( Intent(this, AddPointToRouteActivity::class.java)); }
+        // getListPointsCurrentRoute(idRoute, this)
     }
 
     override fun onResume() {
@@ -57,7 +52,7 @@ class CurrentRouteActivity : AppCompatActivity() {
             }
             R.id.author -> { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.site)))); true; }
             R.id.change_name -> { changeRouteName(routeName, idRoute, this); true; }
-            // R.id.add_point -> { addNewRoutePoint(idRoute, this); true; }
+            R.id.settings -> { startActivity(Intent(this, AjustesActivity::class.java)); true; }
             R.id.your_comment -> {startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=my.routes.house"))); true; }
             else -> super.onOptionsItemSelected(item)
         }

@@ -18,6 +18,7 @@ class App: Application() {
         lateinit var editor: SharedPreferences.Editor
         var listRoutesLoaded = false
         var flatButtonClicked = false
+        lateinit var pointRouteEmptyApp: PointRoute
         fun playDefaultSound(c: Context){
             try {
                 val notification: Uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
