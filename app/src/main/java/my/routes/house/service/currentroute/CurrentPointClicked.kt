@@ -26,7 +26,10 @@ object CurrentPointClicked {
                 pointRouteEmptyApp = pointList[i]
                 App.editor.putString("idPoint", pointList[i].id); App.editor.apply()
                     if( which == 0 ) c.startActivity( Intent( c, DetailPointActivity::class.java ))
-                    if( which == 1 ) c.startActivity( Intent( c, SeeOnMapPointActivity::class.java ))
+                    if( which == 1 ) {
+                        // aqui otro punto de anuncio
+                        c.startActivity( Intent( c, SeeOnMapPointActivity::class.java ))
+                    }
                     if( which == 3 ) c.startActivity( Intent( c, EditSelectedPointActivity::class.java ))
                     if( which == 5 ) showMeOptionsRemovePoint( idRoute,  c , pointList[i]  )
                     dialog.dismiss()

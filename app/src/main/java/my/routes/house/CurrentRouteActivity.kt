@@ -1,4 +1,6 @@
 package my.routes.house
+import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +8,9 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import kotlinx.android.synthetic.main.activity_current_route.*
 import my.routes.house.service.all.App
 import my.routes.house.service.all.App.Companion.editor
@@ -15,9 +20,15 @@ import my.routes.house.service.currentroute.ChangeNameCurrentRoute.changeRouteNa
 import my.routes.house.service.currentroute.GetListPointCurrentRoute.getListPointsCurrentRoute
 import my.routes.house.service.currentroute.activities.AddPointToRouteActivity
 class CurrentRouteActivity : AppCompatActivity() { var routeName = ""; var idRoute = ""
+    private var mInterstitialAd: InterstitialAd? = null
+    private val adRequest: AdRequest = AdRequest.Builder().build()
+    var context: Activity? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_current_route)
+        context = this
+        chargeAdds()
 
         editor.putString("idPoint", "none"); editor.apply()
         routeName = intent.getStringExtra("name").toString()
@@ -45,6 +56,9 @@ class CurrentRouteActivity : AppCompatActivity() { var routeName = ""; var idRou
             R.id.open_google_map -> {
                 if (App.pointList.size == 0 ) { Toast.makeText(this, resources.getString(R.string.add_point_begin), Toast.LENGTH_LONG).show(); }
                 else {
+
+                    if (mInterstitialAd != null) { mInterstitialAd?.show( this ); chargeAdds() }
+
                     if ( App.listRoutesLoaded ) startActivity(Intent(this, MapsActivity::class.java))
                     else Toast.makeText(this, resources.getString(R.string.try_again), Toast.LENGTH_LONG).show()
                 }
@@ -56,5 +70,12 @@ class CurrentRouteActivity : AppCompatActivity() { var routeName = ""; var idRou
             R.id.your_comment -> {startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=my.routes.house"))); true; }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun chargeAdds() {
+        InterstitialAd.load(this, "ca-app-pub-7286158310312043/2879859996", adRequest, object : InterstitialAdLoadCallback() {
+            override fun onAdLoaded(interstitialAd: InterstitialAd) {
+                mInterstitialAd = interstitialAd
+            }})
     }
 }

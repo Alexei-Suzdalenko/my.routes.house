@@ -16,6 +16,8 @@ import com.google.firebase.ktx.Firebase
 import android.app.Activity
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import kotlinx.android.synthetic.main.activity_login.*
 import my.routes.house.dataclass.User
 import my.routes.house.service.login.Login_UserReplace
@@ -25,6 +27,7 @@ import my.routes.house.service.login.Login_UserReplace
 // svoboda
 // SHA1: DD:12:B4:63:5A:E9:7C:FB:31:8B:FB:D7:07:13:C4:37:35:B8:97:F6
 // SHA256: 01:30:81:C7:CF:60:95:E0:AC:FF:AF:AE:AE:F2:D9:7C:AE:9A:90:F8:E5:F3:43:4C:20:75:39:DF:C4:13:05:C4
+// / ca-app-pub-7286158310312043/2557923222 ca-app-pub-3940256099942544/1033173712
 class LoginActivity : AppCompatActivity() {
     lateinit var mGoogleSignInClient: GoogleSignInClient
     private lateinit var auth: FirebaseAuth
@@ -103,4 +106,11 @@ class LoginActivity : AppCompatActivity() {
         startActivity(Intent(this, ListRoutesActivity::class.java))
         finish()
     }
+ //       private var mInterstitialAd: InterstitialAd? = null
+ //       if (mInterstitialAd != null) { mInterstitialAd?.show( requireActivity() ); chargeAdds() }
+ //       private fun chargeAdds() {
+ //           InterstitialAd.load( requireActivity().applicationContext, "ca-app-pub-7286158310312043/2557923222", adRequest, object : InterstitialAdLoadCallback() {
+ //               override fun onAdLoaded(interstitialAd: InterstitialAd) { mInterstitialAd = interstitialAd }})
+ //       }
+
 }
